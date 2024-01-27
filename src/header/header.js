@@ -26,7 +26,8 @@ const Header = () = {
                 <button className="login">Login</button>
         </div>
         </nav>
-                );
+                
+    );
 }
 
 export default Header;
