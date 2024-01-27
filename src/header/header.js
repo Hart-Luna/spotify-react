@@ -4,30 +4,34 @@ import smallLeft from '../assets/icons/small-left.png';
 import smallRight from '../assets/icons/small-right.png';
 import search from '../assets/icons/search.png';
 
-const Header = () = {
+const Header = () => {
     return (
         <nav className="header__navigation">
-        <div className="navigation">
-            <button className="arrow-left">
-                <img src={smallLeft} alt="arrow-left"/>
-            </button>
-                <button className="arrow-right">
-                    <img src={smallRight} alt="arrow-right"/>
+            <div className="navigation">
+                <button className="arrow-left">
+                    <img src={smallLeft} alt="left arrow" />
                 </button>
-
-            <div classNameName="header__search">
-                    <img src={search} alt="search">
-                    <input id="search-input" type="text" maxlength="800" placeholder="Listen to something new.">
+                <button className="arrow-right">
+                    <img src={smallRight} alt="right arrow" />
+                </button>
             </div>
-        </div>
-
-        <div className="header__login">
+            <div className="header__search">
+                <img src={search} alt="Search"/>
+                <input 
+                    id="search-input" 
+                    maxLength="800" 
+                    autoCorrect="off" 
+                    autoCapitalize="off" 
+                    spellCheck="false"
+                    placeholder="Listen to anything."
+                />
+            </div>
+            <div className="header__login">
                 <button className="subscribe">Subscribe</button>
                 <button className="login">Login</button>
-        </div>
+            </div>
         </nav>
-                
-    );
-}
+    )
+};
 
 export default Header;
